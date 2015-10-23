@@ -46,21 +46,41 @@
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdD-YG-Cet">
+                                <rect key="frame" x="140" y="363" width="320" height="94"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="v0a-IR-Xgg"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OT-fP-erD">
+                                <rect key="frame" x="140" y="323" width="100" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LaV-KV-DTJ" firstAttribute="leading" secondItem="dii-Vg-90N" secondAttribute="leading" id="1I9-UQ-zeR"/>
                             <constraint firstItem="dii-Vg-90N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8IO-Lz-JKE"/>
+                            <constraint firstItem="mdD-YG-Cet" firstAttribute="centerX" secondItem="Tk9-7M-DEK" secondAttribute="centerX" id="98Y-7y-12t"/>
                             <constraint firstItem="Tk9-7M-DEK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GUW-Qr-ubm"/>
                             <constraint firstItem="LaV-KV-DTJ" firstAttribute="top" secondItem="dii-Vg-90N" secondAttribute="bottom" constant="31" id="LTD-OY-g8P"/>
                             <constraint firstAttribute="bottom" secondItem="Tk9-7M-DEK" secondAttribute="bottom" constant="20" symbolic="YES" id="P4Z-UM-mZY"/>
+                            <constraint firstItem="mdD-YG-Cet" firstAttribute="top" secondItem="9OT-fP-erD" secondAttribute="bottom" constant="20" id="d6K-au-Uh2"/>
                             <constraint firstItem="dii-Vg-90N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="dYF-2W-FQ1"/>
+                            <constraint firstItem="Tk9-7M-DEK" firstAttribute="top" secondItem="mdD-YG-Cet" secondAttribute="bottom" constant="92" id="gQJ-5V-AIz"/>
+                            <constraint firstItem="mdD-YG-Cet" firstAttribute="leading" secondItem="9OT-fP-erD" secondAttribute="leading" id="gvd-7w-ivT"/>
                             <constraint firstItem="dii-Vg-90N" firstAttribute="trailing" secondItem="LaV-KV-DTJ" secondAttribute="trailing" id="l4y-8y-Mw1"/>
                             <constraint firstItem="LaV-KV-DTJ" firstAttribute="centerX" secondItem="Tk9-7M-DEK" secondAttribute="centerX" id="nxZ-oD-Bjx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="label" destination="9OT-fP-erD" id="mja-vf-TjC"/>
+                        <outlet property="languagePicker" destination="mdD-YG-Cet" id="CfB-WX-oHf"/>
                         <outlet property="textToTranslate" destination="dii-Vg-90N" id="Rnd-iG-u9J"/>
                         <outlet property="translatedText" destination="LaV-KV-DTJ" id="qmJ-BI-ar3"/>
                     </connections>

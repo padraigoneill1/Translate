@@ -8,15 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     
     @IBOutlet weak var textToTranslate: UITextView!
     @IBOutlet weak var translatedText: UITextView!
-    
+    @IBOutlet weak var languagePicker: UIPickerView!
+    @IBOutlet weak var label: UILabel!
+    // Input data into the Array:
+    let languageData = ["French", "Turkish", "Gaelic"]
     //var data = NSMutableData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Connect data:
+        // Connect data:
+        languagePicker.dataSource = self
+        languagePicker.delegate = self
+      
         
     }
     
@@ -25,12 +33,72 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // The number of columns of data
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // The number of rows of data
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return  languageData.count
+    }
+    
+    // The data to return for the row and component (column) that's being passed in
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return  languageData[row]
+    }
+    
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+       label.text = languageData[row]
+    }
+    
+
+        
+    
+    
+    
+   
+    
+
+
+        
+
+    
     @IBAction func translate(sender: AnyObject) {
         
         let str = textToTranslate.text
         let escapedStr = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
-        let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        var langStr = String()
+        
+        if let language = label.text {
+            switch (language){
+                case "French":
+                    let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+                
+                
+            default:
+                let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+                
+
+                
+            }
+
+        }
+        
+        /*
+        switch label.text{
+        case "French":
+            let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+            
+        case Turkish:
+            let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+            
+        }
+        */
+        
+       // let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
         let urlStr:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
         
