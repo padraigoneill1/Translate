@@ -105,17 +105,19 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         let request = NSURLRequest(URL: url!)// Creating Http Request
         
         //var data = NSMutableData()var data = NSMutableData()
-        
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
-        indicator.center = view.center
-        view.addSubview(indicator)
-        indicator.startAnimating()
+        SwiftSpinner.show("Translating...")
+       
+       // let indicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        //indicator.center = view.center
+        //view.addSubview(indicator)
+        //indicator.startAnimating()
         
         var result = "<Translation Error>"
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
             
-            indicator.stopAnimating()
+             SwiftSpinner.hide()
+            //indicator.stopAnimating()
             
             if let httpResponse = response as? NSHTTPURLResponse {
                 if(httpResponse.statusCode == 200){
@@ -128,7 +130,6 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
                         result = responseData.objectForKey("translatedText") as! String
                     }
                 }
-                
                 self.translatedText.text = result
             }
         }
