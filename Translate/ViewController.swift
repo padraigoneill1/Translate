@@ -24,7 +24,6 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         // Connect data:
         languagePicker.dataSource = self
         languagePicker.delegate = self
-      
         
     }
     
@@ -131,7 +130,10 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
                     }
                 }
                 self.translatedText.text = result
+                
+            
             }
+            
         }
         
     }

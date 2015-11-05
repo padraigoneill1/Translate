@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B30a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +16,45 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y12-LD-6lQ">
+                                <rect key="frame" x="143" y="43" width="315" height="86"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="Jx3-nJ-LHa"/>
+                                    <constraint firstAttribute="width" constant="315" id="f7A-3z-wFs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="82"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language Translator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GW-g1-fcF">
+                                <rect key="frame" x="344" y="149" width="212" height="37"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="AXm-QQ-5WA"/>
+                                    <constraint firstAttribute="height" constant="37" id="B1m-Hv-xkF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text.png" translatesAutoresizingMaskIntoConstraints="NO" id="xxm-Ve-de6">
+                                <rect key="frame" x="49" y="252" width="507" height="334"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y12-LD-6lQ" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="23" id="2qs-HP-Nu7"/>
+                            <constraint firstItem="9GW-g1-fcF" firstAttribute="top" secondItem="Y12-LD-6lQ" secondAttribute="bottom" constant="20" id="4vc-KS-JlJ"/>
+                            <constraint firstItem="Y12-LD-6lQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6jY-VM-ftA"/>
+                            <constraint firstItem="xxm-Ve-de6" firstAttribute="top" secondItem="9GW-g1-fcF" secondAttribute="bottom" constant="66" id="9Ix-tU-c6f"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="xxm-Ve-de6" secondAttribute="bottom" constant="14" id="H7b-V9-Bke"/>
+                            <constraint firstItem="xxm-Ve-de6" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="29" id="jdR-ad-BFq"/>
+                            <constraint firstItem="xxm-Ve-de6" firstAttribute="trailing" secondItem="9GW-g1-fcF" secondAttribute="trailing" id="yCd-Wo-u51"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9GW-g1-fcF" secondAttribute="trailing" constant="24" id="zUJ-zJ-5R1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +62,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="text.png" width="841" height="526"/>
+    </resources>
 </document>
