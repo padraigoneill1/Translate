@@ -57,15 +57,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         super.touchesBegan(touches, withEvent: event)
     }
 
-        
     
-    
-    
-   
-    
-
-
-        
 
     
     @IBAction func translate(sender: AnyObject) {
@@ -104,6 +96,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         let request = NSURLRequest(URL: url!)// Creating Http Request
         
         //var data = NSMutableData()var data = NSMutableData()
+        // Swiftspinner class sourced from GitHub. Author Marin Todorov
         SwiftSpinner.show("Translating...")
        
        // let indicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
@@ -130,7 +123,6 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
                     }
                 }
                 self.translatedText.text = result
-                
             
             }
             

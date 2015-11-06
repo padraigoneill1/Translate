@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F20B09691BEBBC8600D0512D /* text.png in Resources */ = {isa = PBXBuildFile; fileRef = F20B09681BEBBC8600D0512D /* text.png */; settings = {ASSET_TAGS = (); }; };
-		F20B096B1BEBCC7100D0512D /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B096A1BEBCC7100D0512D /* Reach.swift */; settings = {ASSET_TAGS = (); }; };
 		F21298C41BEAA919001B3ADF /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21298C31BEAA919001B3ADF /* SwiftSpinner.swift */; settings = {ASSET_TAGS = (); }; };
 		FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */; };
 		FFD2F9B91BD1101A00F54057 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B81BD1101A00F54057 /* ViewController.swift */; };
@@ -19,7 +18,6 @@
 
 /* Begin PBXFileReference section */
 		F20B09681BEBBC8600D0512D /* text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = text.png; path = Assets.xcassets/text.png; sourceTree = "<group>"; };
-		F20B096A1BEBCC7100D0512D /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		F21298C31BEAA919001B3ADF /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
 		FFD2F9B31BD1101A00F54057 /* Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 				FFD2F9BF1BD1101A00F54057 /* LaunchScreen.storyboard */,
 				FFD2F9C21BD1101A00F54057 /* Info.plist */,
 				F21298C31BEAA919001B3ADF /* SwiftSpinner.swift */,
-				F20B096A1BEBCC7100D0512D /* Reach.swift */,
 			);
 			path = Translate;
 			sourceTree = "<group>";
@@ -145,7 +142,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFD2F9B91BD1101A00F54057 /* ViewController.swift in Sources */,
-				F20B096B1BEBCC7100D0512D /* Reach.swift in Sources */,
 				FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */,
 				F21298C41BEAA919001B3ADF /* SwiftSpinner.swift in Sources */,
 			);
