@@ -14,6 +14,9 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     @IBOutlet weak var translatedText: UITextView!
     @IBOutlet weak var languagePicker: UIPickerView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet var labelDate: UILabel!
+    
+    
     // Input data into the Array:
     let languageData = ["French", "Turkish", "Gaelic"]
     //var data = NSMutableData()
@@ -24,8 +27,13 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         // Connect data:
         languagePicker.dataSource = self
         languagePicker.delegate = self
-        
-    }
+        labelDate.text =
+            NSDateFormatter.localizedStringFromDate(NSDate(),dateStyle: NSDateFormatterStyle.FullStyle, timeStyle: NSDateFormatterStyle.NoStyle)
+        //Tried to curve label corner but didnt work
+        labelDate.layer.masksToBounds = true
+        labelDate.layer.cornerRadius = 8
+        label.layer.masksToBounds = true
+        label.layer.cornerRadius = 8    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
