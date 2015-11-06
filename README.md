@@ -7,3 +7,5 @@ Splash screen image from Flickr: https://www.flickr.com/photos/wwworks/475953595
 
 Activity Spinner from: https://github.com/icanzilb/SwiftSpinner
 Credit to the author Marin Todorov.
+
+Icons used from: https://www.iconfinder.com/icons/86568/lb_search_translate_icon#size=128
